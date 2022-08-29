@@ -4,10 +4,10 @@
       Platz für Logo
     </div>
     <ul>
-      <li>
+      <li routerLink='/' routerLinkActive="routerLinkActive">
         <mat-icon>fact_check</mat-icon>Dashboard
       </li>
-      <li>
+      <li routerLink='/user' routerLinkActive="routerLinkActive">
         <mat-icon>perm_identity</mat-icon>User
       </li>
     </ul>
@@ -19,6 +19,11 @@
       <mat-icon class="menu_icon" (click)="drawer.toggle()">menu</mat-icon>
       <span>Simple CRM</span>
     </mat-toolbar>
+
+    <div class="router_container">
+      <router-outlet></router-outlet>
+    </div>
+    
 
   </div>
 
