@@ -5,10 +5,11 @@
             <th>Birthdate</th>
             <th>City</th>
         </tr>
-        <tr *ngFor="let user of allUsers">
-            <td>{{user.lastName}},{{user.firstName}}</td>
-            <td>{{user.birthDate}}</td>
-            <td>c</td>
+        <tr *ngFor="let user of allUsers" [routerLink]="['/user/' + user.customIdName]">
+            <!-- + user.customIdName -->
+            <td>{{ user.lastName }},{{user.firstName}}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.city }}</td>
         </tr>
     </table>
 </mat-card>
