@@ -38,6 +38,12 @@ ul {
     min-height: 56px;
     display: flex;
     align-items: center;
+
+    img {
+        max-width: 100%;
+        height: 48px;
+        display: block;
+    }
 }
 
 mat-toolbar {
@@ -46,6 +52,5 @@ mat-toolbar {
 }
 
 .router_container {
-    padding-left: 56px;
-    padding-top: 16px
+    padding: 16px 56px;
 }
