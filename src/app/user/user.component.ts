@@ -10,7 +10,7 @@ import { User } from 'src/models/user.class';
 })
 export class UserComponent implements OnInit {
 
-  user = new User();
+  user: User = new User();
 
   constructor(public dialog: MatDialog) { }
 
