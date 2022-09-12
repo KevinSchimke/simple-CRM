@@ -1,1 +1,32 @@
-<p>user-detail works!</p>
+<mat-card class="user_detail_header">
+    <button mat-icon-button class="pin_right_upper_corner" [matMenuTriggerFor]="user_menu">
+        <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #user_menu="matMenu">
+        <button mat-menu-item>EDIT</button>
+        <button mat-menu-item>Item 2</button>
+    </mat-menu>
+    <img src="../../assets/img/user.svg" alt="">
+    <div class="user_details">
+        <h2>{{ user.lastName }}, {{ user.firstName }}</h2>
+        <h3>{{ user.email }}</h3>
+    </div>
+</mat-card>
+
+<mat-card class="mt_32">
+    <button mat-icon-button class="pin_right_upper_corner" [matMenuTriggerFor]="address_menu">
+        <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #address_menu="matMenu">
+        <button mat-menu-item>EDIT</button>
+        <button mat-menu-item>Item 2</button>
+    </mat-menu>
+
+
+    <h2>Address</h2>
+    <mat-card-content>
+        {{ user.street }} {{ user.houseNo}}
+        <br>
+        {{ user.zipCode}} {{ user.city }}
+    </mat-card-content>
+</mat-card>

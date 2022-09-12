@@ -22,10 +22,14 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatCardModule } from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
+
 
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from '../environments/environment';
 import { UserDetailComponent } from './user-detail/user-detail.component';
+import { DialogEditAddressComponent } from './dialog-edit-address/dialog-edit-address.component';
+import { DialogEditUserComponent } from './dialog-edit-user/dialog-edit-user.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +37,9 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
     DashboardComponent,
     UserComponent,
     DialogAddUserComponent,
-    UserDetailComponent
+    UserDetailComponent,
+    DialogEditAddressComponent,
+    DialogEditUserComponent
   ],
   imports: [
     BrowserModule,
@@ -52,6 +58,7 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
     MatNativeDateModule,
     MatProgressBarModule,
     MatCardModule,
+    MatMenuModule,
     AngularFireModule.initializeApp(environment.firebase),
   ],
   providers: [],
